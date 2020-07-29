@@ -10,6 +10,24 @@ const TweetProvider = ({ children }) => {
   const [numOfRetweets, setNumOfRetweets] = React.useState(65);
   const [isLiked, setIsLiked] = React.useState(false);
   const [isRetweeted, setIsRetweeted] = React.useState(false);
+
+  const handleLike = () => {
+    setIsLiked(!isLiked);
+    if (isLiked === true) {
+      setNumOfLikes(numOfLikes - 1);
+    } else {
+      setNumOfLikes(numOfLikes + 1);
+    }
+  };
+  const handleRetweet = () => {
+    setIsRetweeted(!isRetweeted);
+    if (isRetweeted === true) {
+      setNumOfRetweets(numOfRetweets - 1);
+    } else {
+      setNumOfRetweets(numOfRetweets + 1);
+    }
+  };
+
   return (
     <TweetContext.Provider
       value={{
@@ -22,6 +40,8 @@ const TweetProvider = ({ children }) => {
         isLikedByCurrentUser: isLiked,
         numOfLikes: numOfLikes,
         numOfRetweets: numOfRetweets,
+        handleLike: handleLike,
+        handleRetweet: handleRetweet,
       }}
     >
       {children}
