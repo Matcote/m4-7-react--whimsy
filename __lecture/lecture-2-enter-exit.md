@@ -63,10 +63,29 @@ Add a fade-in animation
 ---
 
 https://codesandbox.io/s/vigorous-snyder-x3px9
+//solution:
+const fadeIn = keyframes`
+from {
+transform: translateY(10px);
+opacity: 0;
+}
+
+to {
+transform: translateY(0);
+opacity: 1;
+}
+`;
+
+Add in wrapper:
+animation: \${fadeIn} 500ms;
 
 ---
 
 https://codesandbox.io/s/keen-tharp-nkleq
+Solution:
+const zip = keyframes`0% { transform: translateX(-100px); } 85% { transform: translateX(6px); } 100% { transform: translateX(0px); }`;
+
+const Wrapper = styled.div`font-size: 72px; animation: ${zip} 1400ms;`;
 
 ---
 

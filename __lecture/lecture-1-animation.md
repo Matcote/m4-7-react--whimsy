@@ -98,9 +98,17 @@ Produce the following animations
 
 https://codesandbox.io/s/floral-dream-d517n
 
+//Solution: Add to const Surface
+transition: all ease 300ms;
+&:hover{
+cursor: pointer;
+transform: translate(-8px, -8px);
+}
+
 ---
 
 https://codesandbox.io/s/beautiful-ishizaka-c48ho?file=/src/App.js
+//solution: change z-index on gloss and On
 
 ---
 
