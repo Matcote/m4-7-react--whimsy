@@ -22,7 +22,7 @@ const fade = keyframes`
     }
 `;
 const Wrapper = styled.div`
-  position: fixed;
+  position: absolute;
   border-radius: 50%;
   animation: ${pop} 500ms forwards, ${fade} 700ms forwards;
 `;
